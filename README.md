@@ -89,3 +89,14 @@ The browser sends JSON messages:
 - `{"type":"release_all"}`
 
 The bridge requires an initial `{"type":"auth","token":"..."}` message before accepting input.
+
+
+## Recommended browser-streaming route (researched 2026-11-21)
+
+A promising existing open-source project is [Moonlight-Web](https://github.com/linckosz/moonlight-web). Unlike a plain controller page, it provides a PC-side streaming server and a browser client, including touch controls. Its current release page lists a Windows x64 installer: [MoonlightWeb v0.4.3 releases](https://github.com/linckosz/moonlight-web/releases/latest).
+
+This is a third-party project, not an official Moonlight client. Review its source, release notes, permissions, and installer before running it. It still requires a capable Windows gaming PC with GTA V legally installed; it does not make GTA V run on Android or provide the game. The phone opens the host's browser URL after the PC-side server is installed and configured.
+
+**Important:** the custom `bridge.py` and touch deck above are an experimental alternative input prototype. They are not integrated into Moonlight-Web and are not required when using Moonlight-Web's built-in browser controls. Do not run both input systems at once unless you have a specific reason.
+
+For a more established native-app route, use [Sunshine](https://github.com/LizardByte/Sunshine) on the gaming PC and [Moonlight for Android](https://github.com/moonlight-stream/moonlight-android) on the phone. This uses the Android app rather than a browser tab.
