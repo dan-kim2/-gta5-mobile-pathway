@@ -1,1 +1,2 @@
-pyautogui>=0.9.54,<1.0\nwebsockets>=12,<16\n
+pyautogui>=0.9.54,<1.0
+websockets>=12,<16
